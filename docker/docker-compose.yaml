@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    command: -p 4500
+    container_name: kotlin-hibernate
+    environment:
+      - POSTGRES_USER=kotlin-hibernate
+      - POSTGRES_PASSWORD=kotlin-hibernate
+      - POSTGRES_DB=kotlin-hibernate
+    ports:
+      - "4500:4500"
+    restart: always
